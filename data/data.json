@@ -1,0 +1,177 @@
+{   "2022":{
+        "abril": {
+            "saldo": {
+                "anterior": 0,
+                "total": 4300,
+                "utilizado": 388.77,
+                "disponible": 3911.23
+            },
+            "pago":{
+                "minimo": 121.28,
+                "total": 306.96
+            }
+        },
+        "mayo": {
+            "saldo": {
+                "anterior": 1575.22,
+                "total": 4300,
+                "utilizado":  4137.94,
+                "disponible": 162.06
+            },
+            "pago":{
+                "minimo": 920.31,
+                "total": 1723.31
+            }
+        },
+        "junio": {
+            "saldo": {
+                "anterior": 1575.22,
+                "total": 4300,
+                "utilizado":  4137.94,
+                "disponible": 162.06
+            },
+            "pago":{
+                "minimo": 920.31,
+                "total": 1723.31
+            }
+        },
+        "julio": {
+            "saldo": {
+                "anterior": 1723.31,
+                "total": 4300,
+                "utilizado":  3308.87,
+                "disponible": 991.13
+            },
+            "pago":{
+                "minimo": 1030.84,
+                "total": 1511.26
+            }
+        },
+        "agosto": {
+            "saldo": {
+                "anterior": 1511.26,
+                "total": 4300,
+                "utilizado":  3534.51,
+                "disponible": 765.49
+            },
+            "pago":{
+                "minimo": 1366.43,
+                "total": 2240.92
+            }
+        },
+        "septiembre": {
+            "saldo": {
+                "anterior": 2240.92,
+                "total": 4300,
+                "utilizado":   2835.60,
+                "disponible": 1464.40
+            },
+            "pago":{
+                "minimo": 1209.87,
+                "cuotas": 1174.42,
+                "total": 2245.93
+            }
+        },
+        "octubre": {
+            "saldo": {
+                "anterior": 2245.93,
+                "total": 4300,
+                "utilizado":   4376.98,
+                "disponible": -76.98
+            },
+            "pago":{
+                "minimo": 1025.68,
+                "cuotas": 966.92,
+                "total": 2855.89
+            }
+        },
+        "noviembre": {
+            "saldo": {
+                "anterior": 2855.89,
+                "total": 4300,
+                "utilizado":   4253.96,
+                "disponible": 46.04
+            },
+            "pago":{
+                "minimo": 922.33,
+                "cuotas": 850.11,
+                "total": 3213.06
+            }
+        },
+        "diciembre": {
+            "saldo": {
+                "anterior": 2855.89,
+                "total": 4300,
+                "utilizado":   4253.96,
+                "disponible": 46.04
+            },
+            "pago":{
+                "minimo": 922.33,
+                "cuotas": 850.11,
+                "total": 3213.06
+            }
+        }
+    },  
+    "2023":{
+        "enero" : {
+            "saldo": {
+                "anterior": 1819.15,
+                "total": 4300,
+                "utilizado": 4079.16,
+                "disponible": 220.84
+            },
+            "pago":{
+                "minimo": 982.18,
+                "total": 2130.69
+            }
+        },
+        "febrero" : {
+            "saldo": {
+                "anterior": 2130.69,
+                "total": 4300,
+                "utilizado": 4428.25,
+                "disponible": -128.25
+            },
+            "pago":{
+                "minimo": 451.41,
+                "total": 2683.83
+            }
+        },
+        "marzo": {
+            "saldo": {
+                "anterior": 2683.83,
+                "total": 4300,
+                "utilizado": 4566.26,
+                "disponible": -266.26
+            },
+            "pago":{
+                "minimo": 754.14,
+                "total": 2719.95
+            }
+        },
+        "abril": {
+            "saldo": {
+                "anterior": 2719.95,
+                "total": 4300,
+                "utilizado": 4610.19,
+                "disponible": -310.19
+            },
+            "pago":{
+                "minimo": 848.39,
+                "total": 3233.70
+            }
+        },
+        "mayo": {
+            "saldo": {
+                "anterior": 3233.70,
+                "total": 4300,
+                "utilizado": 4528.07,
+                "disponible": -228.07
+            },
+            "pago":{
+                "minimo": 624.38,
+                "total": 3460.29
+            }
+        }
+    }
+}

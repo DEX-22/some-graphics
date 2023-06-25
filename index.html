@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deudax</title>
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script type="module">
+
+    const getData = async ()=>{
+
+        const data = await fetch('./data/data.json')
+
+        const deudas = await data.json()
+        const {"2022":dos,"2023":tres} = deudas
+        
+        return {dos,tres}
+    }
+
+
+    const data = await getData()
+    
+    const getMonths = (object) => {
+
+        const months = []
+
+        for (const year in object) {
+            const Year = object[year]
+            for (const month in Year) {
+                months.push(month)
+            }
+        }
+        return months
+    }
+
+    const months = getMonths(data)
+
+
+    const getPagos = (data)=>{
+            const pagoMinimo  = []
+            const pagoTotal = []
+            const saldoUtilizado = []
+            const saldoTotal = []
+            
+        
+        for (const year in data) {
+            const myYear = data[year]
+            for (const month in myYear) {
+
+                const myMonth = myYear[month]
+
+                pagoMinimo.push({month,value:myMonth.pago.minimo})
+                pagoTotal.push({month,value:myMonth.pago.total})
+                saldoUtilizado.push({month,value:myMonth.saldo.utilizado})
+                saldoTotal.push({month,value:myMonth.saldo.total})
+            }
+        }
+        
+        return {
+            pagoMinimo,
+            pagoTotal,
+            saldoUtilizado,
+            saldoTotal
+        }
+
+    }
+
+    const pagos = getPagos(data)
+
+    const getDatasets = (pagos)=>{
+        
+        const dataset = []
+       
+
+
+        
+        for (const dataG in pagos) {
+            const graphic = {
+            label: dataG,
+            data: [],
+            borderWidth: 3
+            }
+
+            for (const el of pagos[dataG]) {
+                // console.log(el.value);
+                graphic.data.push(el.value)
+                
+            }
+            
+            dataset.push(graphic)
+
+        }
+        
+        return dataset
+    }
+
+    const info = getDatasets(pagos)
+
+  const ctx = document.getElementById('myChart');
+
+console.log(info);
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: months,
+      datasets:info
+    },
+    options: {
+    //     animations: {
+    //   tension: {
+    //     duration: 1000,
+    //     easing: 'linear',
+    //     from: 1,
+    //     to: 0,
+    //     loop: true
+    //   }
+    // },
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>
